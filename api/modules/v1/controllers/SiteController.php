@@ -10,8 +10,7 @@ class SiteController extends Controller
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         return [
             'message' => 'API test Ok!',
-            'code' => 100,
+            'code' => 200,
         ];
     }
-
 }

@@ -5,6 +5,13 @@
  * User: zhangying
  */
 
+if (!function_exists('baseClassName')) {
+    function baseClassName ($className)
+    {
+        return strtolower(basename(str_replace('\\', '/', $className)));
+    }
+}
+
 if (!function_exists('sign')) {
     function sign(array $params, $string = '', $isnull = false)
     {
@@ -36,14 +43,6 @@ if (!function_exists('sign')) {
         $params['str'] = $str;
         $params['sign']=$sign;
         return $sign;
-    }
-}
-
-
-if(!function_exists('baseClassName')){
-    function baseClassName ($className)
-    {
-        return strtolower(basename(str_replace('\\', '/', $className)));
     }
 }
 

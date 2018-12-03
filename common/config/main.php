@@ -1,4 +1,7 @@
 <?php
+define('ENV_CONFIG_PATH', __DIR__);
+$env = \Env\EnvInstance::getInstance();
+
 return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
