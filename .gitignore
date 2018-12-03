@@ -1,2 +1,3 @@
-.idear/*
-git rm --cached -r vendor
+.idea
+/vendor
+
