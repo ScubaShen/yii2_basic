@@ -17,9 +17,9 @@ if (!function_exists('sign')) {
     {
         ksort($params);
         $str = '';
-        if ($isnull === true) {//空值不参与签名
+        if ($isnull === true) { //空值不参与签名
             foreach ($params as $k => $v) {
-                if ($v !== ''){
+                if ($v !== '') {
                     if ('' == $str) {
                         $str .= $k . '=' . trim($v);
                     } else {
@@ -28,7 +28,7 @@ if (!function_exists('sign')) {
                 }
 
             }
-        }else{
+        } else {
             foreach ($params as $k => $v) {
                 if ('' == $str) {
                     $str .= $k . '=' . trim($v);
@@ -38,10 +38,10 @@ if (!function_exists('sign')) {
             }
         }
 
-        $str = $string == false ? $str : $str . $string;//如果有拼接参数，则将参数拼接在后面
+        $str = $string == false ? $str : $str . $string; //如果有拼接参数，则将参数拼接在后面
         $sign=md5($str);
         $params['str'] = $str;
-        $params['sign']=$sign;
+        $params['sign'] = $sign;
         return $sign;
     }
 }
